@@ -88,7 +88,7 @@ for (let i = 0; i < arr.length; i++) {
 
 // index of map
 
-const products = [
+/* const products = [
     { name: "phone", brand: "samsung", price: 5000 },
     { name: "laptop", brand: "lenovo", price: 20000 },
     { name: "mouse", brand: "delux", price: 200 }
@@ -97,4 +97,26 @@ const products = [
 products.map((pd, index) => {
     console.log(index);
     console.log(pd);
-})
+}) */
+
+
+// api
+
+/* fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
+    .then(res => res.json())
+    .then(data => console.log(data.drinks)) */
+
+const loadData = async () => {
+    const res = await fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita");
+    const data = await res.json();
+    // console.log(data);
+    showData(data.drinks)
+}
+
+loadData();
+const showData = (allData) => {
+    // console.log(allData);
+    allData.forEach(data => {
+        console.log(data.strDrink);
+    })
+}
