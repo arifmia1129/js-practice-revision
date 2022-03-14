@@ -40,7 +40,7 @@ dog(dogObj); */
 
 // Nested Array 
 
-const dreamGirl = [
+/* const dreamGirl = [
     {
         dream1: {
             name: "bbu",
@@ -75,4 +75,12 @@ const dreamGirl = [
 const friends = dreamGirl[0].dream1.contactInfo[0].facebook.friendsList;
 for (const friend of friends) {
     console.log(friend?.name);
+} */
+
+// for loop
+
+const arr = ["Binu", "Arif", "Shahin", "Naim", "Shuvo"];
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
 }
