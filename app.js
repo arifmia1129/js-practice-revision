@@ -38,7 +38,7 @@ const dog = ({ name, color, age }) => {
 
 dog(dogObj); */
 
-// Nested Array 
+// Nested Array
 
 /* const dreamGirl = [
     {
@@ -79,8 +79,22 @@ for (const friend of friends) {
 
 // for loop
 
-const arr = ["Binu", "Arif", "Shahin", "Naim", "Shuvo"];
+/* const arr = ["Binu", "Arif", "Shahin", "Naim", "Shuvo"];
 
 for (let i = 0; i < arr.length; i++) {
     console.log(arr[i]);
-}
+} */
+
+
+// index of map
+
+const products = [
+    { name: "phone", brand: "samsung", price: 5000 },
+    { name: "laptop", brand: "lenovo", price: 20000 },
+    { name: "mouse", brand: "delux", price: 200 }
+];
+
+products.map((pd, index) => {
+    console.log(index);
+    console.log(pd);
+})
